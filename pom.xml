@@ -8,15 +8,15 @@
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
 	<name>Fidelis</name>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	<build>
-		<sourceDirectory>src</sourceDirectory>
 		<resources>
-		<resource>
-		<directory>
-		 src/main/resources
-		</directory>
-		</resource>
-		</resources>
+			<resource>
+				<directory>main/resources</directory>
+			</resource>
+		</resources> 
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -45,21 +45,20 @@
 						<goals>
 							<goal>copy-dependencies</goal>
 						</goals>
-							<configuration>
-								<excludeTransitive>true</excludeTransitive>
-								<type>dll</type>
-								<includeArtifactIds>dsj</includeArtifactIds>
-								<failOnMissingClassifierArtifact>true</failOnMissingClassifierArtifact>
-								<silent>false</silent>
-								<outputDirectory>target/APPNAME/WEB-INF/lib</outputDirectory>
-								<overWriteReleases>true</overWriteReleases>
-								<overWriteSnapshots>true</overWriteSnapshots>
-								<overWriteIfNewer>true</overWriteIfNewer>
-							</configuration>
+						<configuration>
+							<excludeTransitive>true</excludeTransitive>
+							<type>dll</type>
+							<includeArtifactIds>dsj</includeArtifactIds>
+							<failOnMissingClassifierArtifact>true</failOnMissingClassifierArtifact>
+							<silent>false</silent>
+							<outputDirectory>target/APPNAME/WEB-INF/lib</outputDirectory>
+							<overWriteReleases>true</overWriteReleases>
+							<overWriteSnapshots>true</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
 	</build>
 	<dependencies>
@@ -69,7 +68,8 @@
 			<artifactId>itextpdf</artifactId>
 			<version>5.5.9</version>
 		</dependency>
-
+		<!-- <dependency> <groupId>br.com.fidelisLib</groupId> <artifactId>FidelisLibs</artifactId> 
+			<version>1.0</version> <type>dll</type> </dependency> -->
 
 	</dependencies>
 
